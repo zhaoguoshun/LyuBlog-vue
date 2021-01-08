@@ -14,7 +14,7 @@
 
                 </div>
 
-                <div id="comments" class="comments-area" v-if="articles.commentStatus==0 || articles.commentStatus=='0'">
+                <div id="comments" class="comments-area" v-if="articles.commentStatus==0 || articles.commentStatus==null">
                     <ol class="comment-list">
                         <li class="comments-anchor">
                             <!--<ul id="anchor-comment-40">-->
@@ -92,11 +92,16 @@
             }
         },
         created(){
+
+            console.log(this.$route.params.id)
             getArticle(this.$route.params.id).then(data=>{
+                console.log(data.data)
                 if(data){
                     this.articles =data.data
                     this.user=data.data.user
                 }
+            }).catch(error=>{
+                this.$message.error(error)
             })
             getCommentArticle(this.$route.params.id).then(data=>{
                 this.comments=data.data

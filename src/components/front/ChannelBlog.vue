@@ -8,7 +8,7 @@
                 <span class="blogpic imgscale"><i><router-link :to='"/detail/"+item.id'>{{item.channel.name}}</router-link></i>
                     <router-link :to='"/detail/"+item.id'>
                         <img v-if="item.titleImg==null ||item.titleImg=='' " width="130px" height="120px" src="@/assets/images/flower.jpg" alt="">
-                        <img v-else  :src="item.titleImg" alt="">
+                        <img v-else  :src="item.titleImg"  height="120px" alt="">
                     </router-link>
                 </span>
                 <p class="blogtext">{{item.summary}} </p>
@@ -24,7 +24,7 @@
                 <span class="blogpic imgscale"><i><router-link :to='"/detail/"+item.id'>{{item.channel.name}}</router-link></i>
                     <router-link :to='"/detail/"+item.id'>
                         <img v-if="item.titleImg==null ||item.titleImg=='' " width="130px" height="120px" src="@/assets/images/flower.jpg" alt="">
-                        <img v-else  :src="item.titleImg" alt="">
+                        <img v-else  :src="item.titleImg"  height="120px" alt="">
                     </router-link>
                 </span>
                 <p class="blogtext">{{item.summary}} </p>

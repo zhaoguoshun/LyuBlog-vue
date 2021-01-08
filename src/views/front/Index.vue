@@ -7,7 +7,6 @@
                 <HeaderLine></HeaderLine>
                 <Table v-if="xx"></Table>
                 <NewBlog v-if="xx" :search="newData" :childevenTitle="title"></NewBlog>
-
             </div>
             <div class="rbox">
               <AboutMe></AboutMe>

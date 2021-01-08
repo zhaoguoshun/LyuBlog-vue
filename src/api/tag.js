@@ -27,7 +27,7 @@ export function getArticle(articleTag) {
 }
 
 export function all(tag) {
-    return axiosInstall.post('tag/all',tag)
+    return axiosInstall.post('/front/article/all',tag)
 }
 
 export function detail(id) {

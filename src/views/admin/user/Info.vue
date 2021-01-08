@@ -81,7 +81,7 @@
                 showDialog:false,
                 imagecropperShow: false, // 是否显示上传组件
                 imagecropperKey: 0, // 上传组件id
-                image: 'http://localhost:8081/cms/upload/3bb6badb-7235-492b-8aa1-700eaa4e0771.png',
+                image: 'http://shunxinblog.oss-cn-hangzhou.aliyuncs.com/2020/12/30/c1d5fb12c96c48f0b10d1b5764b73ecd.jpg',
                 //https://wpimg.wallstcn.com/577965b9-bb9e-4e02-9f0c-095b41417191
                 rules: {
                     nickname: [{required: true, message: '请输入昵称', trigger: 'blur'}],

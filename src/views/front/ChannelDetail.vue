@@ -14,7 +14,7 @@
             </div>
             <div class="rbox">
                 <Order></Order>
-                <Like></Like>
+                <!--<Like></Like>-->
                 <Tag></Tag>
                 <FriendLink></FriendLink>
             </div>
@@ -30,13 +30,12 @@
     import Order from "../../components/front/Order";
     import FriendLink from "../../components/front/FriendLink";
     import Footer from "../../components/front/Footer";
-    import Like from  '../../components/front/Like'
     import Tag from "../../components/front/Tag";
     import  {get} from "@/api/front";
     export default {
         name: "Detail",
         components: {
-            Tag, Footer, FriendLink, Order , Header, Like
+            Tag, Footer, FriendLink, Order , Header
         },
         data(){
             return{
@@ -47,13 +46,13 @@
             this.getChannel(this.$route.params.id)
         },
         beforeRouteUpdate(to,from ,next){
-            console.log(to.params)
             this.getChannel(to.params.id)
             next()
         },
         methods:{
             getChannel(id){
                 get(id).then(data=>{
+                    console.log(data.data)
                     this.channel=data.data
                 })
             }
