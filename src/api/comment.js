@@ -1,7 +1,7 @@
 import axiosInstall from './axiosInstance';
 
 export function create(comment) {
-    return axiosInstall.post('comment/create',comment)
+    return axiosInstall.post('front/article/create',comment)
 }
 
 
